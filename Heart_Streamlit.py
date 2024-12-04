@@ -12,7 +12,7 @@ st.write("""
 This dashboard created by : [@muhammadvarelantoni](www.linkedin.com/in/muhammadvarelantoni)
 """)
 
-add_selectitem = st.sidebar.selectbox("Want to open about?", ("Iris Species!", "Heart Disease!"))
+add_selectitem = st.sidebar.selectbox("Want to open about?", ("Heart Disease!", "Iris Species!"))
 
 def heart():
     st.write("""
