@@ -30,22 +30,22 @@ def heart():
             st.sidebar.header('Manual Input')
             cp = st.sidebar.slider('Chest pain type', 1,4,2)
             if cp == 1.0:
-                wcp = "Nyeri dada tipe angina"
+                wcp = "Chest pain caused by angina."
             elif cp == 2.0:
-                wcp = "Nyeri dada tipe nyeri tidak stabil"
+                wcp = "Unstable chest pain, possibly angina."
             elif cp == 3.0:
-                wcp = "Nyeri dada tipe nyeri tidak stabil yang parah"
+                wcp = "Severe unstable chest pain, likely angina."
             else:
-                wcp = "Nyeri dada yang tidak terkait dengan masalah jantung"
-            st.sidebar.write("Jenis nyeri dada yang dirasakan oleh pasien", wcp)
+                wcp = "Chest pain not related to heart issues."
+            st.sidebar.write("The type of chest pain experienced by the patient.", wcp)
             thalach = st.sidebar.slider("Maximum heart rate achieved", 71, 202, 80)
-            slope = st.sidebar.slider("Kemiringan segmen ST pada elektrokardiogram (EKG)", 0, 2, 1)
-            oldpeak = st.sidebar.slider("Seberapa banyak ST segmen menurun atau depresi", 0.0, 6.2, 1.0)
+            slope = st.sidebar.slider("ST segment elevation or depression on an electrocardiogram (ECG).", 0, 2, 1)
+            oldpeak = st.sidebar.slider("How much the ST segment is depressed or lowered.", 0.0, 6.2, 1.0)
             exang = st.sidebar.slider("Exercise induced angina", 0, 1, 1)
             ca = st.sidebar.slider("Number of major vessels", 0, 3, 1)
-            thal = st.sidebar.slider("Hasil tes thalium", 1, 3, 1)
-            sex = st.sidebar.selectbox("Jenis Kelamin", ('Perempuan', 'Pria'))
-            if sex == "Perempuan":
+            thal = st.sidebar.slider("Thallium test results.", 1, 3, 1)
+            sex = st.sidebar.selectbox("Gender", ('Woman', 'Man'))
+            if sex == "Woman":
                 sex = 0
             else:
                 sex = 1
